@@ -1,0 +1,26 @@
+{
+  "name": "contextbuilder",
+  "private": true,
+  "workspaces": [
+    "apps/mcp-server",
+    "packages/ts/shared",
+    "packages/ts/kb-reader",
+    "packages/ts/openrouter-provider",
+    "packages/schemas/*"
+  ],
+  "scripts": {
+    "build": "bun run --filter '*' build",
+    "test": "bun test",
+    "lint": "bunx biome check .",
+    "lint:fix": "bunx biome check --write .",
+    "format": "bunx biome format --write .",
+    "format:check": "bunx biome format .",
+    "check": "bunx biome check .",
+    "check:fix": "bunx biome check --write ."
+  },
+  "devDependencies": {
+    "@libsql/client": "^0.17.0",
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "bun-types": "^1.3.8"
+  }
+}

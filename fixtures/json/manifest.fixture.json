@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "019748d2-b3f0-7000-8000-000000000001",
+  "name": "example-docs",
+  "source_url": "https://example.com/docs",
+  "tool_version": "0.1.0",
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-02T12:00:00Z",
+  "page_count": 3,
+  "config": {
+    "depth": 3,
+    "concurrency": 4
+  },
+  "artifacts": null,
+  "enrichment": null
+}

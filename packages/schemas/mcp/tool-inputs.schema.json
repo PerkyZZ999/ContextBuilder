@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://contextbuilder.dev/schemas/mcp/tool-inputs.schema.json",
+  "title": "McpToolInputs",
+  "description": "Input schemas for ContextBuilder MCP server tools.",
+  "definitions": {
+    "SearchDocsInput": {
+      "type": "object",
+      "required": ["kb_id", "query"],
+      "properties": {
+        "kb_id": {
+          "type": "string",
+          "description": "Knowledge base identifier."
+        },
+        "query": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Search query string."
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 10,
+          "description": "Maximum number of results."
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetPageInput": {
+      "type": "object",
+      "required": ["kb_id", "path"],
+      "properties": {
+        "kb_id": {
+          "type": "string",
+          "description": "Knowledge base identifier."
+        },
+        "path": {
+          "type": "string",
+          "description": "Page path within the KB."
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetTocInput": {
+      "type": "object",
+      "required": ["kb_id"],
+      "properties": {
+        "kb_id": {
+          "type": "string",
+          "description": "Knowledge base identifier."
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetArtifactInput": {
+      "type": "object",
+      "required": ["kb_id", "artifact_name"],
+      "properties": {
+        "kb_id": {
+          "type": "string",
+          "description": "Knowledge base identifier."
+        },
+        "artifact_name": {
+          "type": "string",
+          "enum": ["llms.txt", "llms-full.txt", "SKILL.md", "rules.md", "style.md", "do_dont.md"],
+          "description": "Name of the artifact to retrieve."
+        }
+      },
+      "additionalProperties": false
+    },
+    "ListKbsInput": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    }
+  }
+}

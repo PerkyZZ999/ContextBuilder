@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="readthedocs" content="true">
+  <title>API Reference — ReadTheDocs Project documentation</title>
+  <link rel="stylesheet" href="/_static/css/theme.css">
+</head>
+<body class="wy-body-for-nav">
+  <nav class="wy-nav-side">
+    <div class="wy-side-nav-search">
+      <a href="/">Project Docs</a>
+    </div>
+    <div class="wy-menu wy-menu-vertical">
+      <ul class="current">
+        <li class="toctree-l1"><a href="/installation">Installation</a></li>
+        <li class="toctree-l1 current"><a href="/api" class="current">API Reference</a></li>
+        <li class="toctree-l1"><a href="/changelog">Changelog</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="wy-nav-content-wrap">
+    <div class="wy-nav-content">
+      <div class="rst-content">
+        <div role="main" class="document">
+          <div class="section">
+            <h1>API Reference</h1>
+            <p>This page documents the public API.</p>
+            <h2>Client Class</h2>
+            <p>The main entry point for using the library.</p>
+            <pre><code class="language-python">from project import Client
+
+client = Client(api_key="your-key")
+result = client.query("hello")</code></pre>
+            <h2>Configuration Options</h2>
+            <table>
+              <thead><tr><th>Parameter</th><th>Type</th><th>Description</th></tr></thead>
+              <tbody>
+                <tr><td>api_key</td><td>str</td><td>Your API key</td></tr>
+                <tr><td>timeout</td><td>int</td><td>Request timeout in seconds</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer>
+          <div role="navigation">
+            <a href="/installation">Previous: Installation</a>
+            <a href="/changelog">Next: Changelog</a>
+          </div>
+          <p>Built with Sphinx using a theme by Read the Docs.</p>
+        </footer>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "@contextbuilder/mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts"
+  },
+  "dependencies": {
+    "@contextbuilder/kb-reader": "workspace:*",
+    "@contextbuilder/shared": "workspace:*",
+    "@libsql/client": "0.17.0",
+    "@modelcontextprotocol/sdk": "1.26.0",
+    "zod": "4.3.6"
+  }
+}

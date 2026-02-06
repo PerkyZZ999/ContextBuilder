@@ -1,0 +1,43 @@
+# Example Docs — Full
+
+> Complete documentation content for the Example project.
+
+## Installation
+
+To install Example, run:
+
+```bash
+npm install example
+```
+
+### Prerequisites
+
+- Node.js 18+
+- npm or bun
+
+## Quick Start
+
+```javascript
+import { Example } from 'example';
+
+const app = new Example();
+app.start();
+```
+
+## REST API
+
+### GET /api/items
+
+Returns a list of items.
+
+### POST /api/items
+
+Creates a new item.
+
+## Authentication
+
+Use bearer tokens for API authentication:
+
+```bash
+curl -H "Authorization: Bearer <token>" https://api.example.com/items
+```

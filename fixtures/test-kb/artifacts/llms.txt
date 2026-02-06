@@ -1,0 +1,13 @@
+# Example Docs
+
+> Example documentation for testing.
+
+## Getting Started
+
+- [Getting Started](getting-started): Overview of the project and quickstart guide.
+- [Installation](getting-started/installation): Run the install command.
+- [Configuration](getting-started/configuration): Configure the tool.
+
+## API Reference
+
+- [API Reference](api-reference): The main API endpoint.

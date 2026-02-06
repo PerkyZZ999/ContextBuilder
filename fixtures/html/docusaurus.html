@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-docusaurus-version="3.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="generator" content="Docusaurus v3.0.0">
+  <title>Installation | Example Docs</title>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/">Example Docs</a>
+    <a href="/docs">Docs</a>
+    <a href="/blog">Blog</a>
+  </nav>
+  <div class="main-wrapper">
+    <aside class="sidebar">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a class="menu__link" href="/docs/getting-started">Getting Started</a>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__link menu__link--active" href="/docs/getting-started/installation">Installation</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__link" href="/docs/getting-started/quick-start">Quick Start</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__link" href="/docs/api">API Reference</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <article>
+      <div class="markdown">
+        <h1>Installation</h1>
+        <p>Follow these steps to install Example on your system.</p>
+        <h2>Prerequisites</h2>
+        <ul>
+          <li>Node.js 18 or higher</li>
+          <li>A package manager (npm, yarn, or bun)</li>
+        </ul>
+        <h2>Install via npm</h2>
+        <pre><code class="language-bash">npm install example-tool</code></pre>
+        <h2>Configuration</h2>
+        <p>After installation, create a config file:</p>
+        <pre><code class="language-json">{
+  "name": "my-project",
+  "version": "1.0.0"
+}</code></pre>
+        <table>
+          <thead><tr><th>Option</th><th>Default</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>verbose</td><td>false</td><td>Enable verbose output</td></tr>
+            <tr><td>output</td><td>./dist</td><td>Output directory</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <footer class="theme-doc-footer">
+        <a href="https://github.com/example/repo/edit/main/docs/installation.md">Edit this page</a>
+      </footer>
+    </article>
+  </div>
+  <footer class="footer">
+    <p>Copyright © 2024 Example Inc.</p>
+  </footer>
+  <script src="/bundle.js"></script>
+</body>
+</html>

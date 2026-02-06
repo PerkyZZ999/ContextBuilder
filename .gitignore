@@ -1,0 +1,43 @@
+# ─── Rust ────────────────────────────────────────────────────
+target/
+**/*.rs.bk
+*.pdb
+
+# ─── TypeScript / Bun ────────────────────────────────────────
+node_modules/
+dist/
+*.tsbuildinfo
+
+# ─── Runtime data (local-only, never commit) ─────────────────
+var/cache/
+var/logs/
+var/kb/
+
+# ─── OS files ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+._*
+
+# ─── IDE / Editor ────────────────────────────────────────────
+.idea/
+.vscode/*
+!.vscode/mcp.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# ─── Environment / Secrets ───────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ─── Debug / Coverage ───────────────────────────────────────
+*.lcov
+coverage/
+*.profraw
+*.profdata

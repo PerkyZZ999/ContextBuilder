@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Getting Started | VitePress Docs</title>
+</head>
+<body>
+  <div id="app">
+    <div id="VPContent">
+      <div class="VPSidebar">
+        <nav>
+          <ul>
+            <li><a href="/guide/introduction">Introduction</a></li>
+            <li><a href="/guide/getting-started" class="active">Getting Started</a></li>
+            <li><a href="/guide/configuration">Configuration</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="VPDoc">
+        <div class="vp-doc">
+          <h1>Getting Started</h1>
+          <p>This guide will help you get up and running with VitePress.</p>
+          <h2>Installation</h2>
+          <p>Install VitePress using your favourite package manager:</p>
+          <pre><code class="language-bash">bun add -d vitepress</code></pre>
+          <h2>File Structure</h2>
+          <p>A typical VitePress project has the following structure:</p>
+          <pre><code class="language-text">docs/
+├── .vitepress/
+│   └── config.ts
+├── getting-started.md
+└── index.md</code></pre>
+          <div class="tip custom-block">
+            <p class="custom-block-title">TIP</p>
+            <p>VitePress supports hot module replacement for a fast development experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/@vite/client"></script>
+</body>
+</html>

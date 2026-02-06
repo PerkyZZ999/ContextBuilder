@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://contextbuilder.dev/schemas/toc.schema.json",
+  "title": "Toc",
+  "description": "toc.json stored at the root of each knowledge base directory.",
+  "type": "object",
+  "required": ["sections"],
+  "properties": {
+    "sections": {
+      "type": "array",
+      "description": "Top-level TOC sections.",
+      "items": { "$ref": "#/definitions/TocEntry" }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "TocEntry": {
+      "type": "object",
+      "required": ["title", "path"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Display title."
+        },
+        "path": {
+          "type": "string",
+          "description": "Stable local path within docs/ (e.g., getting-started/installation)."
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Original source URL for traceability."
+        },
+        "summary": {
+          "type": "string",
+          "description": "LLM-generated or extracted summary."
+        },
+        "children": {
+          "type": "array",
+          "description": "Nested child entries.",
+          "items": { "$ref": "#/definitions/TocEntry" },
+          "default": []
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

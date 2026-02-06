@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://contextbuilder.dev/schemas/manifest.schema.json",
+  "title": "KbManifest",
+  "description": "manifest.json stored at the root of each knowledge base directory.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "source_url",
+    "tool_version",
+    "created_at",
+    "updated_at",
+    "page_count"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Schema version for forward compatibility."
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID v7 identifier for this knowledge base."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable name for the knowledge base."
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Original documentation URL."
+    },
+    "tool_version": {
+      "type": "string",
+      "description": "ContextBuilder version that created this KB."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of KB creation."
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of last KB update."
+    },
+    "page_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of pages in the KB."
+    },
+    "config": {
+      "description": "Build/crawl configuration used.",
+      "type": ["object", "null"]
+    },
+    "artifacts": {
+      "description": "Artifact metadata populated after enrichment.",
+      "type": ["object", "null"]
+    },
+    "enrichment": {
+      "description": "Enrichment metadata (model, tokens, timestamp).",
+      "type": ["object", "null"]
+    }
+  },
+  "additionalProperties": false
+}

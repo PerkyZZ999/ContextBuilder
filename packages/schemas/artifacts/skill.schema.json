@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://contextbuilder.dev/schemas/skill.schema.json",
+  "title": "SkillMeta",
+  "description": "Metadata schema for SKILL.md artifacts (Agent Skills standard).",
+  "type": "object",
+  "required": ["name", "description", "version", "source_url"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Skill name."
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of what the skill provides."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of the skill."
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Original documentation URL."
+    },
+    "kb_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "KB identifier that generated this skill."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp of skill generation."
+    },
+    "model_id": {
+      "type": "string",
+      "description": "LLM model used for enrichment."
+    },
+    "topics": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key topics covered by this skill."
+    }
+  },
+  "additionalProperties": false
+}

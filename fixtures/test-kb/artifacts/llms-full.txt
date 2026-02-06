@@ -1,0 +1,32 @@
+# Example Docs — Full Documentation
+
+## Table of Contents
+
+- Getting Started
+  - Installation
+  - Configuration
+- API Reference
+
+---
+
+# Getting Started
+
+Welcome to the docs.
+
+---
+
+# Installation
+
+Run the install command.
+
+---
+
+# Configuration
+
+Configure the tool via config.toml.
+
+---
+
+# API Reference
+
+The main API endpoint is /api/v1.

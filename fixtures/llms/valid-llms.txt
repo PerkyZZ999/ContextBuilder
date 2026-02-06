@@ -1,0 +1,18 @@
+# Example Docs
+
+> Example documentation for testing the ContextBuilder discovery module.
+
+## Getting Started
+
+- [Installation](https://docs.example.com/getting-started/installation): How to install
+- [Quick Start](https://docs.example.com/getting-started/quick-start): Get up and running fast
+
+## API Reference
+
+- [REST API](https://docs.example.com/api/rest): REST endpoint documentation
+- [GraphQL API](https://docs.example.com/api/graphql): GraphQL schema and queries
+
+## Guides
+
+- [Authentication](https://docs.example.com/guides/auth): Setting up authentication
+- [Deployment](https://docs.example.com/guides/deployment): Deploy to production

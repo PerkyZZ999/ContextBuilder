@@ -1,0 +1,14 @@
+{
+  "name": "@contextbuilder/kb-reader",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun"
+  },
+  "dependencies": {
+    "@contextbuilder/shared": "workspace:*",
+    "@libsql/client": "0.17.0"
+  }
+}

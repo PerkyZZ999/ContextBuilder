@@ -1,0 +1,15 @@
+[package]
+name = "contextbuilder-markdown"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+contextbuilder-shared = { workspace = true }
+scraper = { workspace = true }
+htmd = { workspace = true }
+url = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+regex = { workspace = true }

@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://contextbuilder.dev/schemas/mcp/tool-outputs.schema.json",
+  "title": "McpToolOutputs",
+  "description": "Output schemas for ContextBuilder MCP server tools.",
+  "definitions": {
+    "SearchResult": {
+      "type": "object",
+      "required": ["path", "score"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Page path within the KB."
+        },
+        "title": {
+          "type": ["string", "null"],
+          "description": "Page title."
+        },
+        "score": {
+          "type": "number",
+          "description": "FTS5 rank score (lower is better)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "SearchDocsOutput": {
+      "type": "object",
+      "required": ["results"],
+      "properties": {
+        "results": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/SearchResult" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "PageOutput": {
+      "type": "object",
+      "required": ["path", "content"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Page path within the KB."
+        },
+        "title": {
+          "type": ["string", "null"],
+          "description": "Page title."
+        },
+        "content": {
+          "type": "string",
+          "description": "Markdown content of the page."
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Original page URL."
+        }
+      },
+      "additionalProperties": false
+    },
+    "ArtifactOutput": {
+      "type": "object",
+      "required": ["name", "content"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Artifact file name."
+        },
+        "content": {
+          "type": "string",
+          "description": "Full text content of the artifact."
+        }
+      },
+      "additionalProperties": false
+    },
+    "KbListEntry": {
+      "type": "object",
+      "required": ["id", "name", "source_url"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "KB identifier."
+        },
+        "name": {
+          "type": "string",
+          "description": "KB name."
+        },
+        "source_url": {
+          "type": "string",
+          "description": "Source documentation URL."
+        }
+      },
+      "additionalProperties": false
+    },
+    "ListKbsOutput": {
+      "type": "object",
+      "required": ["kbs"],
+      "properties": {
+        "kbs": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/KbListEntry" }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
